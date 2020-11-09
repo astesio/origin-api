@@ -1,0 +1,76 @@
+{
+  "title": "Body Schema",
+  "type": "object",
+  "properties": {
+    "age": {
+      "type": "number",
+      "minimum": 0,
+      "multipleOf": 1
+    },
+    "dependents": {
+      "type": "number",
+      "minimum": 0
+    },
+    "income": {
+      "type": "number",
+      "minimum": 0
+    },
+    "marital_status": {
+      "type": "string",
+      "enum": [
+        "single",
+        "married"
+      ]
+    },
+    "risk_questions": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      },
+      "examples": [
+        [
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    "house": {
+      "type": "object",
+      "required": [
+        "ownership_status"
+      ],
+      "properties": {
+        "ownership_status": {
+          "type": "string",
+          "enum": [
+            "owned",
+            "mortgaged"
+          ]
+        }
+      }
+    },
+    "vehicle": {
+      "type": "object",
+      "required": [
+        "year"
+      ],
+      "properties": {
+        "year": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "age",
+    "dependents",
+    "income",
+    "marital_status",
+    "risk_questions"
+  ]
+}

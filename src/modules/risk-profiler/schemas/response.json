@@ -1,0 +1,49 @@
+{
+  "title": "Response Schema",
+  "type": "object",
+  "properties": {
+    "auto": {
+      "type": "string",
+      "enum": [
+        "economic",
+        "regular",
+        "responsible",
+        "ineligible"
+      ]
+    },
+    "disability": {
+      "type": "string",
+      "enum": [
+        "economic",
+        "regular",
+        "responsible",
+        "ineligible"
+      ]
+    },
+    "home": {
+      "type": "string",
+      "enum": [
+        "economic",
+        "regular",
+        "responsible",
+        "ineligible"
+      ]
+    },
+    "life": {
+      "type": "string",
+      "enum": [
+        "economic",
+        "regular",
+        "responsible",
+        "ineligible"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "auto",
+    "disability",
+    "home",
+    "life"
+  ]
+}
